@@ -1,0 +1,24 @@
+$colors: (
+    "dark": black,
+    "linkBackground": rgb(242, 242, 255),
+    "hoverLink": rgb(182, 182, 241),
+    "sassColor": rgb(209, 16, 16),
+    "white": white
+);
+
+$utilities: (
+    "paragraphSize": 2.5rem,
+    "rem1": 1rem,
+    "rem1-5": 1.5rem,
+    "rem5": 5rem,
+);
+
+//use with map-get($map: , $key: );
+//use with map-get($colors, "dark");
+
+
+
+
+
+
+

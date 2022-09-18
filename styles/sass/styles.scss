@@ -1,0 +1,83 @@
+@use "maps" as *;
+@use "fonts" as *;
+@use "base" as *;
+@use "mixins" as *;
+@use "variables" as *;
+
+
+.navBar {
+    width: $width100;
+    background-color: transparent;
+
+    .list {
+        @include flexbox(center, row);
+        list-style-type: none;
+        font-size: map-get($utilities , "paragraphSize");
+        text-transform: uppercase;
+        padding: 0;
+
+        .listItem {
+            background-color: map-get($colors , "linkBackground");;
+            padding: map-get($utilities , "rem1-5") 2.5rem;
+            margin: 0.5rem;
+            border-radius: 5px;
+            font-weight: bold;
+
+            &:hover {
+                background-color: map-get($colors , "hoverLink");
+            }
+        }
+    }
+}
+
+.mainContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: $width1024px;
+    height: 500px;
+    margin: map-get($utilities , "rem1") auto;
+
+    .main__text {
+        align-self: center;
+
+        .main__header {
+            color: map-get($colors , "sassColor");
+            text-align: center;
+            font-style: italic;
+        }
+
+        .main__paragraph {
+            text-indent: 50px;
+        }
+
+        .main__button {
+            @include button;
+            background-color: map-get($colors , "sassColor");
+            color: map-get($colors , "white");
+        }
+
+        .main__button--secondary {
+            @extend .main__button;
+            margin-left: 2.5rem;
+            background-color: map-get($colors , "hoverLink");
+        }
+    }
+
+    .main__image {
+        place-self: center;
+    }
+
+    @media screen and (max-width: $width768px) {
+        & {
+            grid-template-columns: 1fr;
+
+            .main__text {
+                margin-top: map-get($utilities , "rem5");
+            }
+
+            .main__image {
+                margin-top: map-get($utilities , "rem5");
+            }
+        }
+    }
+}

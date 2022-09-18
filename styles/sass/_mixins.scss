@@ -1,0 +1,23 @@
+@use "maps" as *;
+
+@mixin flexbox ($justify, $direction) {
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: $direction;
+}
+
+@mixin button {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: map-get($utilities , "rem1-5");
+    border-radius: 5px;
+    margin-top: map-get($utilities , "rem1-5");
+    margin-left: map-get($utilities , "rem5");
+    padding: map-get($utilities , "rem1");
+    display: inline-block;
+}
+
+//use with @include name;
+//use with @include flexbox(center, column);
