@@ -1,0 +1,10 @@
+@function weight($key) {
+    @if $key == bold{
+        @return bold;
+    }@else if $key == normal {
+        @return normal;
+    }
+}
+
+//use
+//weight(bold) / weight(normal)

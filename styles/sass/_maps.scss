@@ -13,9 +13,27 @@ $utilities: (
     "rem5": 5rem,
 );
 
-//use with map-get($map: , $key: );
-//use with map-get($colors, "dark");
+// @each $key, $value in $colors {
+//     .text-#{$key} {
+//         color: $value;
+//     }
 
+//     @for $i from 1 through 9 {
+//         .text-#{$key}-light-#{$i} {
+//             color: mix(white, $value, $i * 10);
+//         }
+//     }
+// }
+
+//use
+//map-get($map: , $key: );
+//map-get($colors, "dark");
+
+//debug
+//@debug map-get($colors, "dark"); - value;
+//@debug map-has-key($colors, "dark"); - true/false;
+//@debug map-remove($colors, "dark"); - remove;
+//@debug map-merge($colors, ("red": #ff0000)); - add;
 
 
 

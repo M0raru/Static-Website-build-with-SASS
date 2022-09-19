@@ -81,6 +81,7 @@ a {
 }
 .mainContent .main__text {
   align-self: center;
+  font-weight: normal;
 }
 .mainContent .main__text .main__header {
   color: rgb(209, 16, 16);
